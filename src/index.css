@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+
+  font-size: 1.6rem;
+  color: var(--dark-purple);
+
+  background: url(/images/background-pattern-mobile.svg) no-repeat;
+  background-size: contain;
+  background-color: var(--light-pink);
+}
+
+#root {
+  width: calc(100% - 4.5rem);
+}
+
+main {
+  padding: 2.4rem;
+  background-color: var(--white);
+  border-radius: 0.8rem;
+  box-shadow: 0 3rem 6rem #0000001a;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.icon-star {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+}
+
+li:not(:last-child) {
+  border-bottom: 0.1rem solid var(--light-pink);
+}
+
+li div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.8rem;
+}
+
+li:not(:last-child) div {
+  margin-bottom: 2rem;
+}
+
+li:not(:first-child) div {
+  margin-top: 2rem;
+}
+
+li h3 {
+  font-size: 1.6rem;
+
+  transition: color 0.15s;
+}
+
+li h3:hover {
+  color: #ad28eb;
+  cursor: pointer;
+}
+
+li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+li button img {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+li p {
+  font-size: 1.4rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.5;
+  color: var(--grayish-purple);
+  margin-top: 2.3rem;
+}
+
+li:not(:last-child) p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 926px) {
+  body {
+    background: url(/images/background-pattern-desktop.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--light-pink);
+  }
+
+  #root {
+    width: 60rem;
+  }
+
+  main {
+    padding: 4rem 3.8rem;
+    border-radius: 1.6rem;
+  }
+
+  header {
+    margin-bottom: 3.2rem;
+  }
+
+  .icon-star {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  li h3 {
+    font-size: 1.8rem;
+  }
+
+  li p {
+    font-size: 1.6rem;
+  }
+
+  li:not(:last-child) div {
+    margin-bottom: 2.4rem;
+  }
+
+  li:not(:first-child) div {
+    margin-top: 2.4rem;
+  }
+
+  li:not(:last-child) p {
+    margin-bottom: 2.4rem;
+  }
+}
